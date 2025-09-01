@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title | default: "bmarse" -}}</title>
+    {% render "head.liquid" %}
+    <link href="/theme.css" rel="stylesheet" />
+  </head>
+  <!-- Look this HTML and CSS is NOT going to be pretty.  It is a means to an end.  I'm so sorry. -->
+  <body>
+    {% render "components/nav.liquid" %}
+    <main>
+      {{- content -}}
+    </main>
+  </body>
+</html>

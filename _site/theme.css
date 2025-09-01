@@ -1,0 +1,293 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  margin: 0px;
+  padding-inline-start: 0px;
+  padding-left: 1rem;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  background-color: rgba(4, 0, 10, 0.9);
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0)),
+    url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  background-attachment: fixed;
+  color: #FFF;
+  font-family: "Roboto Mono", monospace;
+  min-height: 100%;
+
+  a {
+    color: #b5b6b9;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  pre.snippet {
+    margin: 0 auto;
+    margin-top: 2em;
+    max-width: 1000px;
+    text-align: left;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0 0.2em 0;
+    padding: 0;
+  }
+
+  .documentation {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: left;
+  }
+}
+
+nav {
+  text-align: center;
+  margin: 0 auto;
+  ul {
+    li {
+      display: inline;
+
+      &:before {
+        content: " | ";
+        padding: 0 0.5em;
+        color: #666;
+      }
+
+      &:first-child:before {
+        content: "";
+        padding: 0;
+      }
+    }
+  }
+}
+
+main {
+  text-align: center;
+  padding: 2em;
+
+  p {
+    padding: 1em;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.window {
+  width: calc(50% - 2em);
+  min-width: 300px;
+  margin: 0 auto;
+  margin-top: 2em;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  text-align: left;
+  border-radius: 9px 9px 7px 7px;
+  border: #020203 1px solid;
+  box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.6), 0 1.5px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  border-radius: 9px 9px 7px 7px;
+  border-top: #909195 0.5px solid;
+}
+
+.content {
+  min-height: 25px;
+  margin: 0 auto;
+  padding: 5px;
+  background: #292c33;
+  border: 1px solid #65686c;
+  border-top: none;
+  border-radius: 0px 0px 7px 7px;
+
+  pre {
+    color: #b5b6b9;
+  }
+
+  .todo {
+    margin: 2.5em;
+    padding: 2em;
+    border: 1px solid #585858;
+
+    li {
+      list-style-type: none;
+      padding: 1px;
+
+      &.checked {
+        color: #b5b6b9;
+      }
+
+      &:before {
+        content: "[ ]: ";
+        color: #fff;
+      }
+
+      &.checked:before {
+        content: "[x]: ";
+      }
+
+      &.selected:before {
+        content: "> [ ]: ";
+        margin-left: -1.2em;
+      }
+
+      &.selected.checked:before {
+        content: "> [x]: ";
+        margin-left: -1.2em;
+      }
+    }
+  }
+
+  #help {
+    color: #b5b6b9;
+    margin-left: 2.5em;
+    padding-bottom: 1em;
+  }
+}
+
+.title-bar {
+  background: #292c33;
+  margin: 0 auto;
+  padding: 5px;
+  padding-top: 5px;
+  border: 1px solid #65686c;
+  border-top: 0.5px solid #65686c;
+  border-radius: 7px 7px 0px 0px;
+  border-bottom: none;
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0;
+    background: #4a5c66;
+    &.red {
+      background: #ff6057;
+      margin-left: 2px;
+
+      &:hover {
+        background: #ff4238;
+      }
+    }
+
+    &.amber {
+      background: #ffbd2e;
+
+      &:hover {
+        background: #ffb007;
+      }
+    }
+
+    &.green {
+      background: #27c93f;
+
+      &:hover {
+        background: #21ab34;
+      }
+    }
+  }
+  .title {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 4px 0 0;
+
+    font-weight: 600;
+    font-size: 13px;
+    color: #a5a8af;
+
+    .controls {
+      display: block;
+      position: absolute;
+    }
+  }
+}
+

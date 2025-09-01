@@ -1,0 +1,32 @@
+---
+permalink: /tododo/
+layout: default.liquid
+title: Bmarse - Tododo
+---
+<h1>// Tododo</h1> 
+
+<p>Tododo is the TUI todo manager that should be extinct.</p>
+<p>Powered by Golang and <a href="https://github.com/charmbracelet/bubbletea">Bubble Tea</a>.</p>
+
+{% render "components/macos_window.liquid", screen_file:"components/tododo.liquid" %}
+
+<div class="documentation">
+  <h2>Get Tododo</h2>
+  <pre class="snippet"><code>
+# Install via brew
+brew install bmarse/tododo/tododo
+
+# Install via Golang
+go install github.com/bmarse/tododo@latest
+  </code></pre>
+
+  <h2>See It In Action</h2>
+  <img src={{ '/assets/img/tododo.gif' | url }} alt="Tododo Screenshot 1" />
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('pre.snippet code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+ </script>

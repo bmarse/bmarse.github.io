@@ -1,0 +1,71 @@
+html {
+  background-color: rgba(4, 0, 10, 0.9);
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0)),
+    url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  background-attachment: fixed;
+  color: #FFF;
+  font-family: "Roboto Mono", monospace;
+  min-height: 100%;
+
+  a {
+    color: #b5b6b9;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  pre.snippet {
+    margin: 0 auto;
+    margin-top: 2em;
+    max-width: 1000px;
+    text-align: left;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0 0.2em 0;
+    padding: 0;
+  }
+
+  .documentation {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: left;
+  }
+}
+
+nav {
+  text-align: center;
+  margin: 0 auto;
+  ul {
+    li {
+      display: inline;
+
+      &:before {
+        content: " | ";
+        padding: 0 0.5em;
+        color: #666;
+      }
+
+      &:first-child:before {
+        content: "";
+        padding: 0;
+      }
+    }
+  }
+}
+
+main {
+  text-align: center;
+  padding: 2em;
+
+  p {
+    padding: 1em;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,135 @@
+.window {
+  width: calc(50% - 2em);
+  min-width: 300px;
+  margin: 0 auto;
+  margin-top: 2em;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  text-align: left;
+  border-radius: 9px 9px 7px 7px;
+  border: #020203 1px solid;
+  box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.6), 0 1.5px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  border-radius: 9px 9px 7px 7px;
+  border-top: #909195 0.5px solid;
+}
+
+.content {
+  min-height: 25px;
+  margin: 0 auto;
+  padding: 5px;
+  background: #292c33;
+  border: 1px solid #65686c;
+  border-top: none;
+  border-radius: 0px 0px 7px 7px;
+
+  pre {
+    color: #b5b6b9;
+  }
+
+  .todo {
+    margin: 2.5em;
+    padding: 2em;
+    border: 1px solid #585858;
+
+    li {
+      list-style-type: none;
+      padding: 1px;
+
+      &.checked {
+        color: #b5b6b9;
+      }
+
+      &:before {
+        content: "[ ]: ";
+        color: #fff;
+      }
+
+      &.checked:before {
+        content: "[x]: ";
+      }
+
+      &.selected:before {
+        content: "> [ ]: ";
+        margin-left: -1.2em;
+      }
+
+      &.selected.checked:before {
+        content: "> [x]: ";
+        margin-left: -1.2em;
+      }
+    }
+  }
+
+  #help {
+    color: #b5b6b9;
+    margin-left: 2.5em;
+    padding-bottom: 1em;
+  }
+}
+
+.title-bar {
+  background: #292c33;
+  margin: 0 auto;
+  padding: 5px;
+  padding-top: 5px;
+  border: 1px solid #65686c;
+  border-top: 0.5px solid #65686c;
+  border-radius: 7px 7px 0px 0px;
+  border-bottom: none;
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0;
+    background: #4a5c66;
+    &.red {
+      background: #ff6057;
+      margin-left: 2px;
+
+      &:hover {
+        background: #ff4238;
+      }
+    }
+
+    &.amber {
+      background: #ffbd2e;
+
+      &:hover {
+        background: #ffb007;
+      }
+    }
+
+    &.green {
+      background: #27c93f;
+
+      &:hover {
+        background: #21ab34;
+      }
+    }
+  }
+  .title {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 4px 0 0;
+
+    font-weight: 600;
+    font-size: 13px;
+    color: #a5a8af;
+
+    .controls {
+      display: block;
+      position: absolute;
+    }
+  }
+}
