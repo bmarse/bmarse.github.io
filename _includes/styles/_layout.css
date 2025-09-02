@@ -2,7 +2,7 @@ html {
   background-color: rgba(4, 0, 18, 1);
   background-image:
     linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0)),
-    url("/.11ty/image/?src=assets%2Fimg%2Fdiagmonds.png");
+    url("/assets/img/diagmonds.png");
   background-attachment: fixed;
   color: #FFF;
   font-family: "Roboto Mono", monospace;
