@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bmarse - Tododo</title>
+    <meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/rose-pine-moon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+    <link href="/theme.css" rel="stylesheet">
+  </head>
+  <!-- Look this HTML and CSS is NOT going to be pretty.  It is a means to an end.  I'm so sorry. -->
+  <body>
+    <nav>
+  <ul>
+    <li><a href="/bmarse.github.io/">Home</a></li>
+    <li><a href="/bmarse.github.io/tododo/">Tododo</a></li>
+  </ul>
+</nav>
+
+    <main><h1>// Tododo</h1> 
+
+<p>Tododo is the TUI todo manager that should be extinct.</p>
+<p>Powered by Golang and <a href="https://github.com/charmbracelet/bubbletea">Bubble Tea</a>.</p>
+
+<div class="window">
+  <div class="highlight">
+    <div class="title-bar dark">
+      <div class="title">
+        <div class="controls">
+          <div class="dot red"></div>
+          <div class="dot amber"></div>
+          <div class="dot green"></div>
+        </div>
+        bmarse@iMac:~/project
+      </div>
+    </div>
+    <div class="content">
+      
+<pre class="banner">
+
+     ..   Tododo
+    , Õ   does your task spark joy
+     //_---_
+     \  V   )
+      ------
+</pre>
+<div class="todo">
+  <ul>
+    <li class="checked">Have Some Fun</li>
+    <ul>
+      <li class="checked">Sub list item1</li>
+      <li class="checked">Add dance party mode</li>
+      <li class="selected checked">Test</li>
+    </ul>
+    <li>Bugs</li>
+    <ul>
+      <li class="checked">Add support for capital letters</li>
+      <li>If hiding checked, parents with incomplete children should not hide</li>
+    </ul>
+  </ul>
+</div>
+<div id="help">
+  Press '?' to toggle command menu...
+</div>
+
+    </div>
+  </div>
+</div>
+<script>
+
+document.addEventListener("keydown", function (event) {
+  if (event.key == "?") {
+    const elem = document.getElementById("help");
+    elem.innerHTML =
+      'If you want the real thing <a href="https://github.com/bmarse/tododo" rel="nofollow" target="_blank">github.com/bmarse/tododo</a>';
+  }
+
+  if (event.keyCode == 32 || event.code == "KeyX") {
+    toggleStatus();
+  }
+
+  if (event.code == "KeyK" || event.code == "ArrowUp") {
+    updatePosition(-1);
+  }
+
+  if (event.code == "KeyJ" || event.code == "ArrowDown") {
+    updatePosition(1);
+  }
+});
+
+function getSelectedIndex(matches) {
+  let selectedIndex = 0;
+  for (let i = 0; i < matches.length; i++) {
+    if (Array.from(matches[i].classList).includes("selected")) {
+      selectedIndex = i;
+      break;
+    }
+  }
+
+  return selectedIndex;
+}
+
+function updatePosition(direction) {
+  const matches = document.querySelectorAll(".todo li");
+  let selectedIndex = getSelectedIndex(matches);
+
+  matches[selectedIndex].classList.remove("selected");
+  selectedIndex = selectedIndex + direction;
+  if (selectedIndex < 0) {
+    selectedIndex = matches.length - 1;
+  }
+  if (selectedIndex >= matches.length) {
+    selectedIndex = 0;
+  }
+  matches[selectedIndex].classList.add("selected");
+}
+
+function toggleStatus() {
+  const matches = document.querySelectorAll(".todo li");
+  let selectedIndex = getSelectedIndex(matches);
+
+  matches[selectedIndex].classList.toggle("checked");
+}
+
+</script>
+
+
+<div class="documentation">
+  <h2>Get Tododo</h2>
+  <pre class="snippet"><code>
+# Install via brew
+brew install bmarse/tododo/tododo
+
+# Install via Golang
+go install github.com/bmarse/tododo@latest
+  </code></pre>
+
+  <h2>See It In Action</h2>
+  <picture><source type="image/webp" srcset="/img/3Bp5NqUoqk-1000.webp 1000w"><img src="/img/3Bp5NqUoqk-1000.jpeg" alt="Tododo Screenshot 1" width="1000" height="563"></picture>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('pre.snippet code').forEach((el) => {
+      hljs.highlightElement(el);
+    });
+  });
+ </script>
+</main>
+  </body>
+</html>
