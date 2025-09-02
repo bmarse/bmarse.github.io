@@ -92,7 +92,7 @@ html {
   color: #FFF;
   font-family: "Roboto Mono", monospace;
   min-height: 100%;
-
+  font-size: 1em;
   a {
     color: #b5b6b9;
     font-weight: 600;
@@ -165,7 +165,7 @@ main {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 1em;
   text-align: left;
   border-radius: 9px 9px 7px 7px;
   border: #020203 1px solid;
@@ -185,6 +185,7 @@ main {
   border: 1px solid #65686c;
   border-top: none;
   border-radius: 0px 0px 7px 7px;
+  font-size: 13px;
 
   pre {
     color: #b5b6b9;
@@ -281,7 +282,7 @@ main {
     margin: 0 4px 0 0;
 
     font-weight: 600;
-    font-size: 13px;
+    font-size: 1em;
     color: #a5a8af;
 
     .controls {
@@ -290,4 +291,11 @@ main {
     }
   }
 }
+
+@media (max-width: 1300px) {
+  .window {
+    width: calc(100% - 2em);
+  }
+}
+
 

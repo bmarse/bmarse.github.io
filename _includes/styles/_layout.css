@@ -7,7 +7,7 @@ html {
   color: #FFF;
   font-family: "Roboto Mono", monospace;
   min-height: 100%;
-
+  font-size: 1em;
   a {
     color: #b5b6b9;
     font-weight: 600;
