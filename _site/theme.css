@@ -170,6 +170,50 @@ main {
   border-radius: 9px 9px 7px 7px;
   border: #020203 1px solid;
   box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.6), 0 1.5px 3px 0 rgba(0, 0, 0, 0.1);
+
+  .rainbow {
+    animation: rainbow 1s linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes rainbow{
+  100%,0%{
+    color: rgb(255,0,0);
+  }
+  8%{
+    color: rgb(255,127,0);
+  }
+  16%{
+    color: rgb(255,255,0);
+  }
+  25%{
+    color: rgb(127,255,0);
+  }
+  33%{
+    color: rgb(0,255,0);
+  }
+  41%{
+    color: rgb(0,255,127);
+  }
+  50%{
+    color: rgb(0,255,255);
+  }
+  58%{
+    color: rgb(0,127,255);
+  }
+  66%{
+    color: rgb(0,0,255);
+  }
+  75%{
+    color: rgb(127,0,255);
+  }
+  83%{
+    color: rgb(255,0,255);
+  }
+  91%{
+    color: rgb(255,0,127);
+  }
 }
 
 .highlight {

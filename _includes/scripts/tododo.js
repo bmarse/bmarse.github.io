@@ -51,4 +51,32 @@ function toggleStatus() {
   let selectedIndex = getSelectedIndex(matches);
 
   matches[selectedIndex].classList.toggle("checked");
+  danceMode();
+}
+
+function danceMode() {
+  const matches = document.querySelectorAll(".todo li");
+  let count = 0
+  for (let i = 0; i < matches.length; i++) {
+    if (Array.from(matches[i].classList).includes("checked")) {
+      count += 1
+    }
+  }
+  if (count == matches.length) {
+    toggleRainbow(true);
+    return;
+  }
+  toggleRainbow(false);
+}
+
+function toggleRainbow(complete) {
+  document.querySelectorAll('.content').forEach(contentEl => {
+    contentEl.querySelectorAll('*').forEach(descendant => {
+      if (complete) {
+        descendant.classList.add('rainbow');
+      } else {
+        descendant.classList.remove('rainbow');
+      }
+    });
+  });
 }
