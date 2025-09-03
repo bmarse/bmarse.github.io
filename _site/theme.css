@@ -6,12 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
 /* Remove default margin */
 body,
 h1,
@@ -105,7 +99,6 @@ html {
 
   pre.snippet {
     margin: 0 auto;
-    margin-top: 2em;
     max-width: 1000px;
     text-align: left;
   }
@@ -339,6 +332,15 @@ main {
 @media (max-width: 1300px) {
   .window {
     width: calc(100% - 2em);
+  }
+}
+
+@media (max-width: 550px) {
+  .window {
+    .title {
+      text-align: right;
+      padding-right: 1em;
+    }
   }
 }
 
