@@ -185,3 +185,12 @@
   }
 }
 
+@media (max-width: 550px) {
+  .window {
+    .title {
+      text-align: right;
+      padding-right: 1em;
+    }
+  }
+}
+
