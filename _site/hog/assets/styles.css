@@ -1,0 +1,83 @@
+html, body {
+background-color: #754600 !important;
+background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
+
+  main.text-bg-dark {
+   background: none !important;
+ }
+}
+
+
+.show {
+  position: relative;
+
+  .row {
+    position: relative;
+    background-color: #fcfaf4 !important;
+    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+  }
+
+  .row:after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    -webkit-clip-path: polygon(1% 0%,
+    4% 100%,
+    9% 0%,
+    13% 100%,
+    19% 1%,
+    21% 100%,
+    26% 5%,
+    30% 100%,
+    36% 2%,
+    43% 100%,
+    50% 1%,
+    52% 100%,
+    61% 0%,
+    69% 94%,
+    70% 0%,
+    76% 100%,
+    81% 0%,
+    84% 100%,
+    91% 0%,
+    97% 100%,
+    99% 3%);
+  }
+
+  .row:after {
+    bottom: -3.4px;
+    background-color: #fcfaf4 !important;
+    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+  }
+
+  .show-banner {
+    max-height: 35em;
+
+    img {
+      margin-left: 50%;
+      margin-top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      object-fit: scale-down;
+    }
+  }
+
+  .show-badge {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: -25px;
+    right: -25px;
+    z-index: 1;
+    background: url("imgs/seal-100.png") no-repeat center center;
+  }
+}
+
+@media (max-width: 768px) {
+  .show {
+    .show-badge {
+      left: calc(50% - 50px);
+    }
+  }
+}
