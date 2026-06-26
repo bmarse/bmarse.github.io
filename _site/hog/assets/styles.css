@@ -1,12 +1,21 @@
+@font-face {
+  font-family: "lucy-rose";
+  src: url("fonts/lucy-rose.woff") format("woff");
+}
+
 html, body {
-background-color: #754600 !important;
-background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
+background-color: #59462e !important;
+background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
 
   main.text-bg-dark {
    background: none !important;
  }
 }
 
+#text-logo {
+  text-shadow: 2px 2px 3px rgba(22,9,6,0.75);
+  font-family: "lucy-rose";
+}
 
 .show {
   position: relative;
@@ -53,13 +62,14 @@ background-image: url("https://www.transparenttextures.com/patterns/classy-fabri
   }
 
   .show-banner {
-    max-height: 35em;
+    /*max-height: 35em;*/
 
     img {
-      margin-left: 50%;
+      /*margin-left: 50%;
       margin-top: 50%;
       transform: translateX(-50%) translateY(-50%);
-      object-fit: scale-down;
+      object-fit: scale-down;*/
+      width: calc(100%);
     }
   }
 
@@ -78,6 +88,10 @@ background-image: url("https://www.transparenttextures.com/patterns/classy-fabri
   .show {
     .show-badge {
       left: calc(50% - 50px);
+    }
+
+    h2 {
+      padding-top: 50px;
     }
   }
 }
