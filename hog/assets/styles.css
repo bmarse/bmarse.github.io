@@ -132,3 +132,10 @@ background-image: url("https://www.transparenttextures.com/patterns/clean-textil
     }
   }
 }
+
+
+@media (max-width: 992px) { 
+  main #text-logo {
+    font-size: 4rem;
+  }
+}
