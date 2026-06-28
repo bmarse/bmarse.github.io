@@ -4,6 +4,9 @@
 }
 
 html, body {
+font-family: "Lato", sans-serif;
+font-weight: 400;
+font-style: normal;
 background-color: rgb(129, 110, 86) !important;
 background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
 
@@ -13,12 +16,20 @@ background-image: url("https://www.transparenttextures.com/patterns/clean-textil
 }
 
 #text-logo {
-  text-shadow: 2px 2px 3px rgba(22,9,6,0.75);
+  text-shadow: 
+  -1px -1px 0 rgba(255, 255, 255, 0.3),  
+  1px -1px 0 rgba(255, 255, 255, 0.3),
+  -1px  1px 0 rgba(255, 255, 255, 0.3),
+  1px  1px 0 rgba(255, 255, 255, 0.3),
+  2px 2px 3px rgba(22,9,6,0.75);
   font-family: "lucy-rose";
+  color: #000;
+  font-size: 7rem;
 }
 
 .show {
   position: relative;
+  margin-top: 0 !important;
 
   .accordion {
     --bs-accordion-color: var(--bs-body-color);
