@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Heart of Gold Theater - Now Showing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="/hog/assets/imgs/seal-100.png" height="30px"></a>
+        <a class="navbar-brand" href="/hog/"><img src="/hog/assets/imgs/seal-100.png" height="30px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,9 +21,6 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/hog/">Shows</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/hog/about/">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="/hog/contact/">Contact Us</a>
@@ -44,7 +44,7 @@
               <img src="/hog/assets/shows/an-intervention.jpg" alt="">
           </div>
           <div class="col-lg-12 p-3 p-lg-5 pt-lg-3">
-            <h2 class="display-4 fw-bold lh-1">An Intervention – by Mike Bartlett</h2>
+            <h2 class="display-4 fw-bold lh-1">An Intervention by Mike Bartlett</h2>
             <p class="fs-5 text-secondary">July 16th 2026 – August 2nd 2026</p>
             <p class="lead">
 A searing -- and, for better or worse, timeless -- comedy penned by English screenwriter and playwright Mike Bartlett, <a href="https://www.eventbrite.com/e/an-intervention-by-mike-bartlett-tickets-1991580937195" target="_black" rel="nofollow" class="link-dark">An Intervention</a> deftly and humorously explores a hairline fracture in a 3-year friendship that fissures into a vast canyon. The title is a sharp double-entendre: one friend needs an intervention for her drinking, while the other supports an intervention… elsewhere.
@@ -59,21 +59,6 @@ First produced in the UK in 2014, the script deploys quick-witted, vaudeville-er
 
         <div class="accordion my-5" id="showDetailsAccordion" data-bs-theme="light">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingCast">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCast" aria-expanded="false" aria-controls="collapseCast">
-                Cast
-              </button>
-            </h2>
-            <div id="collapseCast" class="accordion-collapse collapse" aria-labelledby="headingCast" data-bs-parent="#showDetailsAccordion">
-              <div class="accordion-body">
-                <ul>
-                  <li>Amanda Egle</li>
-                  <li>Taylor Adams</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
             <h2 class="accordion-header" id="headingWarnings">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWarnings" aria-expanded="false" aria-controls="collapseWarnings">
                 Content Warnings (Contains Spoilers)
@@ -87,12 +72,50 @@ Although this show can be very funny, it sensitively and seriously tackles diffi
           </div>
         </div>
       </div>
+
+
+      <div class="container py-3 text-center">
+        <h1 id="text-logo" class="display-1 fw-bold">About Us</h1>
+      </div>
+      <div class="container my-5 pb-3 show">
+        <span class="show-badge"></span>
+        <div class="row pb-0 pe-lg-0 align-items-center rounded-1 shadow-lg text-bg-light">
+          <div class="col-lg-12 p-3 p-lg-5 pt-lg-3">
+            <h2 class="display-4 fw-bold lh-1">Hi,</h2>
+            <p class="lead">
+We’re The Heart of Gold.
+
+</p><p class="lead">
+Our mission is to execute exemplary, life-affirming live theatre.<br>
+We promise we’re not haughty; we’re named after a spaceship from a science fiction novel.<br>
+</p><p class="lead">
+Like the Greeks, we believe that theatre should be for everyone.<br>
+Like a former Chicago mayor, we believe that politicians don’t bring people together. Artists do. <br>
+And like that famous Spanish painter, we believe that art is the lie that tells the truth. <br>
+</p><p class="lead">
+All in all, we think that theatre is the finest living exhibition of the human spirit. <br>
+We also think that it can be a total waste of time. <br>
+We promise to be that first thing. <br>
+</p><p class="lead">
+From the bottom of our hearts, thank you for joining us!
+</p>
+            <div class="container p-3">
+Sincerely,<br>
+              <img src="/hog/assets/imgs/signature.png" height="50em">
+              <br>
+Taylor Adams<br>
+Artistic Director
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <div class="container">
       <footer class="d-flex flex-wrap text-center justify-content-center align-items-center py-3 my-4 border-top fw-bold">
           <div>
-            <a href="https://square.link/u/slJ2XAJe" target="_black" rel="nofollow" class="link-underline link-underline-opacity-0"><img src="/hog/assets/imgs/qr.svg" width="200">
-<p class="link-warning">Donate</p></a></p>
+          <img src="/hog/assets/imgs/seal.png" width="200">
+          <br><br>
+          <a class="btn btn-warning btn-lg px-4 gap-3" href="https://square.link/u/slJ2XAJe" target="_black" rel="nofollow">Donate</a>
           </div>
       </footer>
     </div>
